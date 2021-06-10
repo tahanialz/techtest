@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./mystyle.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Starbucks Stories & News</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item mx-4"></li>
+              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active nav-item mx-4">
+              <a class="nav-link" href="post.html">Blog</a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link" href="contact_page.html">Contact</a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link" href="about_page.html">About</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      <div class="content">
+      
+              <h1 class="display-4 font-italic" style="width: 1000px; margin: 0 auto;text-align:center;color: darkgreen;">Welcome to Your source for the latest news from Starbucks</h1>
+              <p class="lead my-3" style="width: 1000px; margin: 0 auto; text-align: center;">Learn about what is happening in our stores and company--from beverage and<br> food announcements to financial news, partner (employee) and customer experience updates.</p>
+         </div>
+       
+
+          <div class="container px-0"style="color: #006400;" >
+            <div class="card"style="background-color: #006400;">
+                <div class="card-body">
+                <h4 style="color: seashell;">Write a blog post</h4>
+                <div class="form-group">
+                    <label for="titleInput"style="color: seashell;">Title</label>
+                    <input type="text" class="form-control" id="titleInput" placeholder="Enter a Title">
+                </div>
+                <div id="titleErr" class="alert alert-danger" style="display:none" role="alert">Please add a title to your post</div>
+                
+                <div class="form-group">
+                    <label for="textInput"style="color: seashell;">Text</label>
+                    <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text"></textarea>
+                </div>
+                <div id="textErr" class="alert alert-danger" style="display:none" role="alert">Please add some text to your post</div>
+                <button id="blogSubmit" onclick="blogSubmit()" class="btn btn-lg btn-primary">Submit</button>
+                </div>
+            </div>
+
+            <br>
+            <div id="blogPosts">
+            <br>
+
+
+
+            <div class="singlePost">
+              <br>
+              <div class="card">
+              <div class="card-body"style=" background-image:url(star3.jpg); "->
+                <div class="row title-row" >
+                  <div class="col-13"><h1 class="blogTitle">New Starbucks Strawberry Funnel Cake Frappuccino </h1></div>
+                  <div class="col-8"></div>
+                  <div class="col-2"></div>
+                  <div class="col-2"><button onclick="blogEditToggle(this)" class="btn btn-sm btn-info m-1">Edit</button> <button onclick="blogDelete(this)" class="btn btn-sm btn-danger m-1">Delete</button></div>
+                </div>
+              
+              <i class="text-muted">By Heidi Peiper</i><br/><br/>
+              <p class="blogText">Starbucks new summer Frappuccino blended beverage evokes a day at the fair, with delicious flavors of strawberries and whipped cream layered with blended coffee and ice, topped with crunchy funnel cake pieces dusted with powdered sugar. When it comes to all-time favorite summertime memories, a day at the fair is always near the top of the list. It’s a kaleidoscope of the senses – from the colorful blur of the carnival rides to the clickety-clack of an old-fashioned roller coaster. And it’s time spent with family and friends.
+
+                That was the inspiration for Starbucks newest summer Frappuccino® blended beverage. Available starting May 11 at Starbucks stores in the United States and Canada, the Starbucks® Strawberry Funnel Cake Frappuccino ® blended beverage joins Starbucks summers lineup of food, beverages and merchandise.</p>
+  
+              
+  
+  
+                <div class="editForm" style="display:none">
+                <h4>Edit this blog post</h4>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" placeholder="Enter a Title" value="${Title}">
+                </div>
+                
+                <div class="form-group">
+                    <label>Text</label>
+                    <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text">${Text}</textarea>
+                </div>
+  
+                <button onclick="blogEdit(this)" class="btn btn-lg btn-primary">Submit</button>
+              </div>
+              </div>    
+              </div>
+              </div>
+
+
+            <div class="singlePost">
+            <br>
+            <div class="card">
+            <div class="card-body"style=" background-image:url(star3.jpg);">
+              <div class="row title-row">
+                <div class="col-13"><h1 class="blogTitle">Shake things up a little with Starbucks new non-dairy iced shaken espresso beverages</h1></div>
+                <div class="col-8"></div>
+                <div class="col-2"></div>
+                <div class="col-2"><button onclick="blogEditToggle(this)" class="btn btn-sm btn-info m-1">Edit</button> <button onclick="blogDelete(this)" class="btn btn-sm btn-danger m-1">Delete</button></div>
+              </div>
+            
+            <i class="text-muted">By Heidi Peiper</i><br/><br/>
+            <p class="blogText">Starbucks introduces two new plant-based iced shaken espresso beverages along with the national launch of oatmilk in stores this spring.
+
+              There’s always been a romance to espresso. It starts with the low rumble of the bean grinder, then that bubbling hiss you hear as the perfect espresso shot cascades into the cup. The crescendo comes with the flick of the wrist as a barista swirls a beautiful cap of foam. You can practically hear Italian opera humming along.</p>
+
+            
+
+
+              <div class="editForm" style="display:none">
+              <h4>Edit this blog post</h4>
+              <div class="form-group">
+                  <label>Title</label>
+                  <input type="text" class="form-control" placeholder="Enter a Title" value="${Title}">
+              </div>
+              
+              <div class="form-group">
+                  <label>Text</label>
+                  <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text">${Text}</textarea>
+              </div>
+
+              <button onclick="blogEdit(this)" class="btn btn-lg btn-primary">Submit</button>
+            </div>
+            </div>    
+            </div>
+            </div>
+
+            <div class="singlePost">
+              <br>
+              <div class="card">
+              <div class="card-body"style=" background-image:url(star3.jpg);">
+                <div class="row title-row">
+                  <div class="col-13"><h1 class="blogTitle">Get a taste of the Starbucks Reserve Roastery with new Pistachio Latte</h1></div>
+                  <div class="col-8"></div>
+                  <div class="col-2"></div>
+                  <div class="col-2"><button onclick="blogEditToggle(this)" class="btn btn-sm btn-info m-1">Edit</button> <button onclick="blogDelete(this)" class="btn btn-sm btn-danger m-1">Delete</button></div>
+                </div>
+              
+              <i class="text-muted">By Heidi Peiper</i><br/><br/>
+              <p class="blogText">Each Starbucks Reserve® Roastery is a destination – an immersive coffee experience in iconic cities around the world that celebrates the company’s heritage and serves as a tribute to the roasting and craft of coffee. Now Starbucks is bringing the flavors of the Roastery to Starbucks stores with its first new beverage of the year, the Pistachio Latte, starting today (Jan. 5) at participating stores in the United States and Canada, and for a limited time this winter season. For the first time, Starbucks is also offering two extraordinary-single origin Starbucks Reserve® whole bean coffees, roasted at Starbucks Reserve Roasteries, to more than 3,200 Starbucks stores</p>
+  
+              
+  
+  
+                <div class="editForm" style="display:none">
+                <h4>Edit this blog post</h4>
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" placeholder="Enter a Title" value="${Title}">
+                </div>
+                
+                <div class="form-group">
+                    <label>Text</label>
+                    <textarea rows="4" class="form-control" id="textInput" placeholder="Enter text">${Text}</textarea>
+                </div>
+  
+                <button onclick="blogEdit(this)" class="btn btn-lg btn-primary">Submit</button>
+              </div>
+              </div>    
+              </div>
+              </div>
+
+            </div>
+            
+          </div>
+          <br/><br/><br/><br/>
+      </div>
+
+
+
+
+    <script src="./blog.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
